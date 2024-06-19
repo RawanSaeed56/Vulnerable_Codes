@@ -1,4 +1,4 @@
-Today we will talk about XSS attack \n
+Today we will talk about XSS attack
 What is the XSS? 
 Where we can find it? 
 What is the Mitigation?
