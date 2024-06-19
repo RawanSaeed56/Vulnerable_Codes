@@ -11,6 +11,7 @@ What is the XSS?
     ![Cross-Site-ScriptingXSS](https://github.com/RawanSaeed56/XSS/assets/142659346/00050273-a9fa-4211-b80f-27493a7b42b8)
 
     1-Refected XSS==>input that i have been entred reflected in (URL) web application or source code form method must be GET
+    ![reflectedXSS](https://github.com/RawanSaeed56/XSS/assets/142659346/6d28aaf4-8761-49be-a9d0-4709474f1c31)
     2-Stored XSS==>store XSS in database method can be POST or GET
     3-DOM XSS==>(Document Object Model) input reflected in js code and we try to execute js function like alert(),confirm(),..
 Where we can find it? 
