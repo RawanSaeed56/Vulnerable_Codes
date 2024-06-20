@@ -9,8 +9,7 @@ What is the XSS?
         there are 3 types of it.
 
     1-Refected XSS==>input that i have been entred reflected in source code.
-    2-Stored XSS==>store XSS in database. 
-    ![Cross-Site-ScriptingXSS](https://github.com/RawanSaeed56/XSS/assets/142659346/00050273-a9fa-4211-b80f-27493a7b42b8)
+    2-Stored XSS==>store XSS in database.
     3-DOM XSS==>(Document Object Model) input reflected in js code and we try to execute js function like alert(),confirm(),..
     
 Where we can find it? 
