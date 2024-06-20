@@ -3,8 +3,6 @@ What is the XSS?
 Where we can find it? 
 What is the Mitigation?
 
-lets answer this questions
-
 What is the XSS?
         Cross Site Scripting (XSS) is a vulnerability in a web application that allows a third party to execute a script in the user’s browser 
     there are 3 types of it 
