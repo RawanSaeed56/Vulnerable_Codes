@@ -14,6 +14,6 @@ What is the XSS?
     2-Stored XSS==>store XSS in database method can be POST or GET
     3-DOM XSS==>(Document Object Model) input reflected in js code and we try to execute js function like alert(),confirm(),..
 Where we can find it? 
-    if you take input from user and dont make any filteration.
+    if you take input from user and don't make any filteration.
 What is the Mitigation? 
    use htmlspecialchars(your input value) then use this value.
