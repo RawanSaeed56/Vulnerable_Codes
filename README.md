@@ -1,7 +1,4 @@
 Today we will talk about XSS attack
-What is the XSS? 
-Where we can find it? 
-What is the Mitigation?
 
 What is the XSS?
         Cross Site Scripting (XSS) belong to Injection category in OWASP top 10.
