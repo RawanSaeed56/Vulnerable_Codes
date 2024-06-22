@@ -1,41 +1,3 @@
- <form method="POST" action="">
-    Enter Your problem<input type="text" name="problem"> 
-    <input type="submit" value="Submit" name="add">
-</form>
-<?php
-require_once 'conn.php';
-if($_SERVER['REQUEST_METHOD']=="POST"&&isset($_POST['add']))
-{
-    if(isset($_POST['problem']))
-    {
-        $sql="INSERT INTO comment (problem) VALUES(:p)";
-        $stat=$conn->prepare($sql);
-        $stat->execute(array(':p'=>$_POST['problem']));//xss here
-    }
-}
-$sql2="SELECT * FROM comment";
-$stat2=$conn->prepare($sql2);
-$stat2->execute();
-$allProblems=$stat2->fetchAll(PDO::FETCH_ASSOC);
-if(!empty($allProblems))
-{
-    $i=1;
-    foreach($allProblems as $problem )
-    {
-        foreach($problem as $prob)
-        {
-            echo "Problem ".$i.": ".$prob."<br>";
-            $i++;
-        }
-    }
-}
-else{
-    echo "Nothing To Show";
-}
-?>
-
-
-
 <form method="POST" action=""> <!-- The form submits to the same page using the POST method -->
     Enter Your problem<input type="text" name="problem"> <!-- Text input for the user's problem -->
     <input type="submit" value="Submit" name="add"> <!-- Submit button labeled "Submit" -->
@@ -50,7 +12,7 @@ if($_SERVER['REQUEST_METHOD']=="POST" && isset($_POST['add'])) // Check if the f
     {
         $sql = "INSERT INTO comment (problem) VALUES(:p)"; // SQL query to insert the problem into the 'comment' table
         $stat = $conn->prepare($sql); // Prepare the SQL statement
-        $stat->execute(array(':p' => $_POST['problem'])); // Execute the prepared statement with the user input (XSS here)
+        $stat->execute(array(':p' => $_POST['problem'])); // Execute the prepared statement with the user input (Stored XSS here)
     }
 }
 
@@ -66,7 +28,7 @@ if(!empty($allProblems)) // Check if there are any problems to display
     {
         foreach($problem as $prob) // Loop through each field in the problem record
         {
-            echo "Problem ".$i.": ".$prob."<br>"; // Output the problem
+            echo "Problem ".$i.": ".$prob."<br>"; // Output the problems (Stored XSS executed here)
             $i++; // Increment the counter
         }
     }
