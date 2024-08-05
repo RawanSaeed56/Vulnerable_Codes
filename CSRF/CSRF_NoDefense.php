@@ -7,9 +7,7 @@ if($_SERVER['REQUEST_METHOD']=="POST"&&isset($_POST['uemail']))
     session_start();
     $sql="UPDATE clients SET email=:email WHERE user_id=:userId";
     $stat=$con->prepare($sql);
-    $stat->execute(array(
-                ':email'=>htmlspecialchars($_POST["email"]),
-                ':userId'=>$_SESSION['id']));//here is the CSRF Attack executed
+    $stat->execute(array(':email'=>htmlspecialchars($_POST["email"]),':userId'=>$_SESSION['id']));//here is the CSRF Attack executed
     echo "email changed";
     }
     else{
